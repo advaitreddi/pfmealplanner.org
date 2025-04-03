@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions & Alternatives</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link JavaScript -->
+    <script src="chatbot.js" defer></script>
+
+
+    <title>Google Translate with Button</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+                'google_translate_element'
+            );
+        }
+
+        function toggleTranslate() {
+            var widget = document.getElementById('google_translate_element');
+            if (widget.style.display === 'none' || widget.style.display === '') {
+                widget.style.display = 'block';
+            } else {
+                widget.style.display = 'none';
+            }
+        }
+
+        function reloadGoogleTranslate() {
+            location.reload(); // Reloads the page to refresh Google Translate
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9999;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #google_translate_element {
+            display: none;
+            position: fixed;
+            top: 40px;
+            left: 10px;
+            z-index: 9999;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="google_translate_toggle" onclick="toggleTranslate()">Translate</button>
+    <div id="google_translate_element"></div>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="problem.html">The Problem</a></li>
+            <li><a href="solution.html" class="active">Solutions</a></li>
+            <li><a href="mealplanner.html">Meal</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="min-h-screen py-20">
+        <div class="container">
+            <div class="max-w-3xl mx-auto space-y-12">
+                <div class="space-y-4 text-center">
+                    <h1 class="text-4xl font-bold tracking-tighter">Solutions & Alternatives</h1>
+                    <p class="text-xl text-muted-foreground">
+                        Practical ways to reduce processed food consumption and make healthier choices.
+                    </p>
+                </div>
+
+                <!-- Solution Cards -->
+                <div class="grid gap-8">
+                    <div class="card">
+                        <div class="card-content flex items-center">
+                            <span class="text-3xl mr-4">🍃</span>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Whole Food Alternatives</h3>
+                                <p class="text-muted-foreground">
+                                    Replace processed snacks with fresh fruits, vegetables, nuts, and whole grains. 
+                                    These natural alternatives provide better nutrition and sustained energy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content flex items-center">
+                            <span class="text-3xl mr-4">🍎</span>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Smart Snacking</h3>
+                                <p class="text-muted-foreground">
+                                    Learn to prepare healthy snacks in advance. Keep nutritious options readily 
+                                    available to avoid processed alternatives when hunger strikes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content flex items-center">
+                            <span class="text-3xl mr-4">📖</span>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Education & Awareness</h3>
+                                <p class="text-muted-foreground">
+                                    Understanding food labels and ingredients helps make informed choices. 
+                                    Learn to identify hidden sugars, sodium, and artificial additives.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-content flex items-center">
+                            <span class="text-3xl mr-4">👥</span>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Community Support</h3>
+                                <p class="text-muted-foreground">
+                                    Join or create healthy eating groups at school or in your community. 
+                                    Share recipes, tips, and motivation with peers making better food choices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Practical Tips Section -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="image-box">
+                        <img src="images/healthy-meal.jpg" alt="Healthy Meal Preparation">
+                    </div>
+                    <div class="prose prose-invert">
+                        <h2>Practical Tips</h2>
+                        <ul>
+                            <li>Plan meals in advance</li>
+                            <li>Learn basic cooking skills</li>
+                            <li>Read nutrition labels</li>
+                            <li>Shop the perimeter of grocery stores</li>
+                            <li>Prepare snacks at home</li>
+                            <li>Stay hydrated with water</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="prose prose-invert max-w-none">
+                    <h2>Making Sustainable Changes</h2>
+                    <p>
+                        The key to reducing processed food consumption is making gradual, 
+                        sustainable changes to your eating habits. Start with small steps.
+                    </p>
+
+                    <h2>School and Home Environment</h2>
+                    <p>Create supportive environments that make healthy choices easier:</p>
+                    <ul>
+                        <li>Keep healthy snacks readily available</li>
+                        <li>Remove tempting processed foods</li>
+                        <li>Get family members involved</li>
+                        <li>Pack nutritious lunches</li>
+                    </ul>
+
+                    <h2>Reading Food Labels</h2>
+                    <p>Learn to identify and avoid:</p>
+                    <ul>
+                        <li>Added sugars and artificial sweeteners</li>
+                        <li>Trans fats and hydrogenated oils</li>
+                        <li>Artificial preservatives and colors</li>
+                        <li>Excessive sodium content</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ✅ Chatbot -->
+    <div id="chat-container">
+        <div id="chat-header" onclick="toggleChat()">
+            🤖 Chatbot <span id="minimize-btn">−</span>
+        </div>
+        <div id="chat-body">
+            <div id="chat-box"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type a message..." />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link JavaScript -->
+    <script defer src="chatbot.js"></script>
+
+    <title>Google Translate with Button</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 
+                'google_translate_element'
+            );
+        }
+
+        function toggleTranslate() {
+            var widget = document.getElementById('google_translate_element');
+            if (widget.style.display === 'none' || widget.style.display === '') {
+                widget.style.display = 'block';
+            } else {
+                widget.style.display = 'none';
+            }
+        }
+
+        function reloadGoogleTranslate() {
+            location.reload(); // Reloads the page to refresh Google Translate
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_toggle {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 9999;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #google_translate_element {
+            display: none;
+            position: fixed;
+            top: 40px;
+            left: 10px;
+            z-index: 9999;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="google_translate_toggle" onclick="toggleTranslate()">Translate</button>
+    <div id="google_translate_element"></div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="problem.html">The Problem</a></li>
+            <li><a href="solution.html" class="active">Solutions</a></li>
+            <li><a href="mealplanner.html">Meal Planner</a></li>
+            <li><a href="grecaptcha.html">recaptcha</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="content">
+            <div class="header">
+                <h1>Impact on Teen Health</h1>
+                <p>How processed foods affect your physical and mental wellbeing during crucial developmental years.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🧠</div>
+                    <h3>Cognitive Function</h3>
+                    <ul>
+                        <li>Reduced concentration and focus</li>
+                        <li>Impact on memory and learning</li>
+                        <li>Mood swings and irritability</li>
+                        <li>Potential long-term brain development effects</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">❤️</div>
+                    <h3>Physical Health</h3>
+                    <ul>
+                        <li>Increased risk of obesity</li>
+                        <li>Cardiovascular health concerns</li>
+                        <li>Digestive system issues</li>
+                        <li>Weakened immune system</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🔋</div>
+                    <h3>Energy Levels</h3>
+                    <ul>
+                        <li>Energy crashes and fatigue</li>
+                        <li>Disrupted sleep patterns</li>
+                        <li>Reduced athletic performance</li>
+                        <li>Decreased daily productivity</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="icon">⚖️</div>
+                    <h3>Growth & Development</h3>
+                    <ul>
+                        <li>Impact on bone density</li>
+                        <li>Hormonal imbalances</li>
+                        <li>Delayed physical development</li>
+                        <li>Nutritional deficiencies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Long-term Health Implications</h2>
+                <p>Poor dietary habits can lead to chronic diseases later in life, including:</p>
+                <ul>
+                    <li>Type 2 diabetes</li>
+                    <li>Heart disease</li>
+                    <li>Certain types of cancer</li>
+                    <li>Mental health disorders</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Impact on Academic Performance</h2>
+                <p>Students who consume high levels of processed foods often experience:</p>
+                <ul>
+                    <li>Difficulty concentrating in class</li>
+                    <li>Poor memory retention</li>
+                    <li>Reduced problem-solving abilities</li>
+                    <li>Lower test scores</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Social and Emotional Effects</h2>
+                <p>The impact extends beyond physical health, affecting:</p>
+                <ul>
+                    <li>Self-esteem and body image</li>
+                    <li>Social relationships</li>
+                    <li>Emotional regulation</li>
+                    <li>Overall quality of life</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="chat-container" class="hidden">
+        <div id="chat-header" onclick="toggleChat()">🤖 Chatbot <span id="minimize-btn">−</span></div>
+        <div id="chat-body">
+            <div id="chat-box"></div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+</body>
+</html>

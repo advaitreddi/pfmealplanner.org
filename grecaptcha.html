@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Not a Robot - reCAPTCHA v2</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #status-message {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="popup-container" id="popup">
+        <div class="popup">
+            <h3>Verify You're Human</h3>
+            <div class="g-recaptcha" data-sitekey="6Lc8SQkrAAAAAKfe4xbjqVcfXJx0SXwHSd2QQ0zg" data-callback="recaptchaVerified"></div>
+        </div>
+    </div>
+
+    <p id="status-message" class="hidden">✅ Verified as human!</p>
+
+    <script>
+        function recaptchaVerified() {
+            document.getElementById("popup").classList.add("hidden");
+            document.getElementById("status-message").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
